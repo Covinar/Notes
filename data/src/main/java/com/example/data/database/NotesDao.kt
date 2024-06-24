@@ -1,6 +1,8 @@
 package com.example.data.database
 
 import androidx.room.Dao
+import androidx.room.Delete
+import androidx.room.DeleteColumn
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
@@ -10,9 +12,9 @@ import com.example.data.entities.NoteEntity
 interface NotesDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertNote(): NoteEntity
+    fun insertNote(noteEntity: NoteEntity)
 
-    @Query("DELETE FROM notes")
+    @Delete
     fun deleteNote(noteEntity: NoteEntity)
 
 }
