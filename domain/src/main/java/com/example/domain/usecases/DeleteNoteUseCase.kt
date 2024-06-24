@@ -4,6 +4,6 @@ import com.example.domain.models.Note
 
 interface DeleteNoteUseCase {
 
-    fun deleteNote(note: Note)
+    operator fun invoke(note: Note)
 
 }
