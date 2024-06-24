@@ -6,9 +6,8 @@ import com.example.data.entities.NoteEntity
 class NotesLocalDataSourceImpl(
     private val notesDao: NotesDao
 ) : NotesLocalDataSource {
-
-    override fun insertNote(): NoteEntity {
-        return notesDao.insertNote()
+    override fun insertNote(noteEntity: NoteEntity) {
+        notesDao.insertNote()
     }
 
     override fun deleteNote(noteEntity: NoteEntity) {

@@ -4,7 +4,7 @@ import com.example.data.entities.NoteEntity
 
 interface NotesLocalDataSource {
 
-    fun insertNote(): NoteEntity
+    fun insertNote(noteEntity: NoteEntity)
 
     fun deleteNote(noteEntity: NoteEntity)
 

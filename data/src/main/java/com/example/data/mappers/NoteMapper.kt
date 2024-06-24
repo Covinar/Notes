@@ -1,4 +1,4 @@
-package com.example.data
+package com.example.data.mappers
 
 import com.example.data.entities.NoteEntity
 import com.example.domain.models.Note
