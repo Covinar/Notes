@@ -9,8 +9,8 @@ class InsertNoteUseCaseImpl(
     private val notesRepository: NotesRepository
 ) : InsertNoteUseCase {
 
-    override fun insertNote(): Flow<Resource<Note>> {
-        return notesRepository.insertNote()
+    override fun invoke(note: Note) {
+        return notesRepository.insertNote(note)
     }
 
 }
