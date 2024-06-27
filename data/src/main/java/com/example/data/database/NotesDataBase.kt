@@ -11,16 +11,4 @@ abstract class NotesDataBase : RoomDatabase() {
 
     abstract fun getDao() : NotesDao
 
-    companion object {
-
-        fun getDb(context: Context) : NotesDataBase {
-            return Room.databaseBuilder(
-                context,
-                NotesDataBase::class.java,
-                "notes.db"
-            ).build()
-        }
-
-    }
-
 }

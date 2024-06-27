@@ -10,4 +10,6 @@ interface NotesRepository {
 
     fun deleteNode(note: Note)
 
+    fun getNotes(): Flow<Resource<List<Note>>>
+
 }
