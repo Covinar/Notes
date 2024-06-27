@@ -1,0 +1,7 @@
+<resources>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="top_bar_title">Notes</string>
+    <string name="empty_notes_title">Help yourself remember...</string>
+    <string name="empty_notes_description">Create a new note for things that are too important to forget.</string>
+    <string name="empty_notes_button">Create new note</string>
+</resources>

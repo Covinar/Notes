@@ -13,5 +13,7 @@ data class NoteEntity(
     @ColumnInfo(name = "text")
     val text: String,
     @ColumnInfo(name = "date")
-    val date: Long
+    val date: Long,
+    @ColumnInfo(name = "is_pined")
+    val isPined: Boolean
 )
