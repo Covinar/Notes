@@ -35,12 +35,7 @@ class NotesViewModel(
                 when (notes) {
                     Resource.Loading -> Unit
                     is Resource.Success -> {
-                        val model = listOf(
-                            Note(1, "Title 1", "Text", Date().time + 5, false),
-                            Note(2, "Title 2", "Text", Date().time + 5, true),
-                            Note(3, "Title 3", "Text", Date().time, false),
-                            Note(4, "Title 4", "Text", Date().time, true)
-                        )
+                        val model = notes.model
                         val pined: MutableList<Note> = mutableListOf()
                         val unPined: MutableList<Note> = mutableListOf()
                         for (note in model) {
