@@ -128,7 +128,7 @@ fun NotesScreen(
                         viewModel.uncheckNote(note)
                     }
                 )
-                if (state.isDeleteMode) {
+                if (state.isDeleteMode && state.checkedNotes.isNotEmpty()) {
                     DeleteDialog(
                         modifier = Modifier
                             .padding(it)
