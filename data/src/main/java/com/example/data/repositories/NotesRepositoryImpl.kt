@@ -2,6 +2,7 @@ package com.example.data.repositories
 
 import com.example.data.database.NotesDao
 import com.example.data.mappers.toEntity
+import com.example.data.mappers.toNote
 import com.example.data.mappers.toNotes
 import com.example.domain.common.Resource
 import com.example.domain.models.Note
@@ -15,11 +16,11 @@ class NotesRepositoryImpl(
     private val notesDao: NotesDao
 ) : NotesRepository {
 
-    override fun insertNote(note: Note) {
+    override suspend fun insertNote(note: Note) {
         notesDao.insertNote(note.toEntity())
     }
 
-    override fun deleteNode(note: Note) {
+    override suspend fun deleteNode(note: Note) {
         notesDao.deleteNote(note.toEntity())
     }
 
@@ -32,5 +33,10 @@ class NotesRepositoryImpl(
             emitAll(notes)
         }
     }
+
+    override suspend fun getNote(id: Int): Note {
+        return notesDao.getNote(id).toNote()
+    }
+
 
 }

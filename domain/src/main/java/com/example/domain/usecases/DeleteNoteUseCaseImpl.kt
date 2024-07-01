@@ -7,7 +7,7 @@ class DeleteNoteUseCaseImpl(
     private val notesRepository: NotesRepository
 ) : DeleteNoteUseCase {
 
-    override fun invoke(note: Note) {
+    override suspend fun invoke(note: Note) {
         notesRepository.deleteNode(note)
     }
 

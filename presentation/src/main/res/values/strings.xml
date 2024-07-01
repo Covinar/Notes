@@ -4,4 +4,13 @@
     <string name="empty_notes_title">Help yourself remember...</string>
     <string name="empty_notes_description">Create a new note for things that are too important to forget.</string>
     <string name="empty_notes_button">Create new note</string>
+    <string name="top_bar_button">Delete %d</string>
+    <string name="delete_dialog_description">Deleting notes can\'t be undone.</string>
+    <string name="delete_dialog_back_button">Back</string>
+    <string name="delete_dialog_delete_button">Delete</string>
+
+    <plurals name="delete_dialog_title">
+        <item quantity="one" formatted="true">Delete %d note?</item>
+        <item quantity="other" formatted="true">Delete %d notes?</item>
+    </plurals>
 </resources>

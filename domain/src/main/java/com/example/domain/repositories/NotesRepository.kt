@@ -6,10 +6,12 @@ import kotlinx.coroutines.flow.Flow
 
 interface NotesRepository {
 
-    fun insertNote(note: Note)
+    suspend fun insertNote(note: Note)
 
-    fun deleteNode(note: Note)
+    suspend fun deleteNode(note: Note)
 
     fun getNotes(): Flow<Resource<List<Note>>>
+
+    suspend fun getNote(id: Int): Note
 
 }

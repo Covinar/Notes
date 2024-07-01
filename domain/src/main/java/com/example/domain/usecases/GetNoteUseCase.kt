@@ -2,8 +2,8 @@ package com.example.domain.usecases
 
 import com.example.domain.models.Note
 
-interface DeleteNoteUseCase {
+interface GetNoteUseCase {
 
-    suspend operator fun invoke(note: Note)
+    suspend operator fun invoke(id: Int) : Note
 
 }

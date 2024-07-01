@@ -7,6 +7,7 @@ import com.example.data.database.NotesDataBase
 import com.example.domain.common.DomainModule
 import com.example.domain.repositories.NotesRepository
 import com.example.domain.usecases.DeleteNoteUseCase
+import com.example.domain.usecases.GetNoteUseCase
 import com.example.domain.usecases.GetNotesUseCase
 import com.example.domain.usecases.InsertNoteUseCase
 import com.example.presentation.di.PresentationInjector
@@ -41,9 +42,12 @@ object SingletonComponent {
     private val getNotesUseCase: GetNotesUseCase
         get() = DomainModule.provideGetNotesUseCase(notesRepository)
 
+    private val getNoteUseCase: GetNoteUseCase
+        get() = DomainModule.provideGetNoteUseCase(notesRepository)
+
     private fun initPresenterInjector() {
         PresentationInjector.init(
-            getNotesUseCase, deleteNoteUseCase, insertNoteUseCase
+            getNotesUseCase, deleteNoteUseCase, insertNoteUseCase, getNoteUseCase
         )
     }
 
