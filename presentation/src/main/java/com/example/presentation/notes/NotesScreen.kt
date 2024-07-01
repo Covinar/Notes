@@ -114,7 +114,9 @@ fun NotesScreen(
                         state.isChecked(note)
                     },
                     onNoteClicked = { note ->
-                        onOpenNote(note.id)
+                        if (!state.isEditMode) {
+                            onOpenNote(note.id)
+                        }
                     },
                     onPinIconClicked = { note ->
                         viewModel.unPinNote(note = note)
